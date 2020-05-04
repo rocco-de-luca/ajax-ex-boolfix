@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolfix mileston1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input class="input-cerca" type="text" name="name" value="" placeholder="cerca film" required>
+    <button class="btn-cerca">cerca</button>
+    <ul id="lista-film"></ul>
+
+
+    <!-- TEMPLATES HANDLEBARS -->
+    <script id="film-template" type="text/x-handlebars-template">
+        <ul class="data">
+            <li class="title">Titolo: {{ title }}</li>
+            <li class="original-title">Titolo originale: {{ originalTitle }}</li>
+            <li class="original-language">Lingua originale: {{ originalLanguage }}</li>
+            <li class="vote-average">Voto medio: {{ voteAverage }}</li>
+        </ul>
+    </script>
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
