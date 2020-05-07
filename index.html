@@ -4,31 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>boolfix mileston1</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <title>Boolfix</title>
 </head>
 
 <body>
-    <input class="input-cerca" type="text" name="name" value="" placeholder="cerca film" required>
-    <button class="btn-cerca">cerca</button>
-    <ul id="lista-film"></ul>
+    <header class="header">
+        <div class="search-container">
+            <img src="img/netflix.jpg" alt="logo">
+            <input id="inputSearch" type="text" placeholder="cerca film" name="search">
+            <button id="btn" type="submit">cerca</button>
+        </div>
+    </header>
+    <main class="movie-list">
 
+    </main>
 
     <!-- TEMPLATES HANDLEBARS -->
-    <script id="film-template" type="text/x-handlebars-template">
-        <ul class="data">
-            <li class="title">Titolo: {{ title }}</li>
-            <li class="original-title">Titolo originale: {{ originalTitle }}</li>
-            <li class="original-language">Lingua originale: {{ originalLanguage }}</li>
-            <li class="vote-average">Voto medio: {{ voteAverage }}</li>
-        </ul>
-    </script>
+    <script id="movie-template" type="text/x-handlebars-template">
+        <div class="movie">
+            <img src="{{poster}}" alt="">
+            <ul class="data">
+                <li class="title">
+                    <span>Titolo:</span>
+                    <span>{{ title }}</span>
+                </li>
+                <li class="original-title">
+                    <span>Titolo originale:</span> 
+                    {{ originalTitle }}
+                </li>
+                <li class="original-language">
+                    <span>Lingua originale:</span> 
+                    {{{ originalLanguage }}}
+                </li>
+                <li class="vote-average">
+                    <span>media voto:</span> 
+                    {{{ vote }}}
+                </li>
+                <li class="type">
+                    <span>type:</span> 
+                    {{ type }}
+                </li>
+                <li class="overview">
+                    <span>overview:</span> 
+                    {{ overview }}
+                </li>
+            </ul>
+        </div>
+        </script>
 
-
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
-    <script src="js/main.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>
