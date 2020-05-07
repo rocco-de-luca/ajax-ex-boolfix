@@ -31,10 +31,10 @@ body{
 }
 
 #inputSearch, #btn{
-position: relative;
-bottom: 40px; 
-   border: 1px solid red;
-   box-shadow: 0 15px 10px -10px rgba(166, 16, 34, 1);
+    position: relative;
+    bottom: 40px; 
+    border: 1px solid red;
+    box-shadow: 0 15px 10px -10px rgba(166, 16, 34, 1);
 }
 
 #btn{
